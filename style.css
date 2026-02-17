@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #00a366;
+    --text-color: #333;
+    --bg-color: #f5f5f5;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    min-height: 1.2em;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+main {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section h2 {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+#skills, #interests, #projects {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+#skills li, #interests li, #projects li {
+    background: var(--bg-color);
+    padding: 12px 15px;
+    border-radius: 5px;
+    border-left: 4px solid var(--primary-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#skills li {
+    border-left-color: var(--secondary-color);
+}
+
+#interests li {
+    border-left-color: var(--primary-color);
+}
+
+#projects li {
+    border-left-color: #ff6b6b;
+}
+
+#skills li:hover, #interests li:hover, #projects li:hover {
+    transform: translateX(5px);
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    #skills, #interests, #projects {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
